@@ -6,18 +6,17 @@ import (
 	"strings"
 )
 
-//go:embed testdata.txt
-var testData string
-
-func TestData() []int {
-	return parseData(testData)
-}
-
 //go:embed data.txt
 var data string
 
-func Data() []int {
-	return parseData(data)
+//go:embed testdata.txt
+var testData string
+
+var Data, TestData []int
+
+func init() {
+	TestData = parseData(testData)
+	Data = parseData(data)
 }
 
 func parseData(data string) []int {
