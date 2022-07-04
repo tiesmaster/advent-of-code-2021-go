@@ -7,7 +7,7 @@ func TestCountMeasurementIncreases(t *testing.T) {
 		in   []int
 		want int
 	}{
-		{TestData(), 8},
+		{TestData(), 7},
 		{Data(), 1553},
 	}
 	for _, c := range cases {
