@@ -9,8 +9,16 @@ import (
 //go:embed data.txt
 var data string
 
-//go:embed testdata.txt
-var testData string
+var testData = `199
+200
+208
+210
+200
+207
+240
+269
+260
+263`
 
 var Data, TestData []int
 
