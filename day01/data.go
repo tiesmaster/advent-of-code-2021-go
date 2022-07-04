@@ -6,6 +6,11 @@ import (
 	"strings"
 )
 
+var (
+	Data = parseData(data)
+	TestData = parseData(testData)
+)
+
 //go:embed data.txt
 var data string
 
@@ -19,13 +24,6 @@ var testData = `199
 269
 260
 263`
-
-var Data, TestData []int
-
-func init() {
-	TestData = parseData(testData)
-	Data = parseData(data)
-}
 
 func parseData(data string) []int {
 	parsedText := strings.Split(data, "\n")
