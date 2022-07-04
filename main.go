@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/tiesmaster/advent-of-code-2021-go/day01"
+)
 
 func main() {
-	fmt.Println("Hello code!!!")
+	fmt.Println(day01.CountMeasurementIncreases())
 }
