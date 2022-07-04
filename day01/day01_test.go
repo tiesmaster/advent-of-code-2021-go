@@ -7,13 +7,13 @@ func TestCountMeasurementIncreases(t *testing.T) {
 		in   []int
 		want int
 	}{
-		{TestData(), 7},
+		{TestData(), 8},
 		{Data(), 1553},
 	}
 	for _, c := range cases {
 		got := CountMeasurementIncreases(c.in)
 		if got != c.want {
-			t.Errorf("CountMeasurementIncreases(%d) == %d, want %d", c.in, got, c.want)
+			t.Errorf("CountMeasurementIncreases(%v) == %v, want %v", c.in, got, c.want)
 		}
 	}
 }
