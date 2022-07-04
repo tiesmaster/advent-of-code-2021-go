@@ -13,6 +13,14 @@ func TestData() []int {
 	return parseData(testData)
 }
 
+//go:embed data.txt
+var data string
+
+func Data() []int {
+	return parseData(data)
+}
+
+
 func parseData(data string) []int {
 	parsedText := strings.Split(data, "\n")
 
