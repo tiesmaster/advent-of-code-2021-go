@@ -10,7 +10,11 @@ import (
 var testData string
 
 func TestData() []int {
-	parsedText := strings.Split(testData, "\n")
+	return parseData(testData)
+}
+
+func parseData(data string) []int {
+	parsedText := strings.Split(data, "\n")
 
 	numbers := make([]int, len(parsedText))
 	for i := 0; i < len(parsedText); i++ {
