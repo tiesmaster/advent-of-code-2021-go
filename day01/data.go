@@ -20,7 +20,6 @@ func Data() []int {
 	return parseData(data)
 }
 
-
 func parseData(data string) []int {
 	parsedText := strings.Split(data, "\n")
 

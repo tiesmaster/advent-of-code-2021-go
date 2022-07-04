@@ -4,7 +4,7 @@ import "testing"
 
 func TestCountMeasurementIncreases(t *testing.T) {
 	cases := []struct {
-		in []int
+		in   []int
 		want int
 	}{
 		{TestData(), 7},
