@@ -1,13 +1,23 @@
 package day01
 
-var TestData []int = []int{
-	199,
-	200,
-	208,
-	210,
-	200,
-	207,
-	240,
-	269,
-	260,
-	263}
+import (
+	_ "embed"
+	"strconv"
+	"strings"
+)
+
+//go:embed testdata.txt
+var testData string
+
+func TestData() []int {
+	parsedText := strings.Split(testData, "\n")
+
+	numbers := make([]int, len(parsedText))
+	for i := 0; i < len(parsedText); i++ {
+		n, _ := strconv.Atoi(parsedText[i])
+
+		numbers[i] = n
+	}
+
+	return numbers
+}
