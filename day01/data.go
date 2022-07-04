@@ -25,8 +25,8 @@ func parseData(data string) []int {
 	parsedText := strings.Split(data, "\n")
 
 	numbers := make([]int, len(parsedText))
-	for i := 0; i < len(parsedText); i++ {
-		n, _ := strconv.Atoi(parsedText[i])
+	for i, s := range parsedText {
+		n, _ := strconv.Atoi(s)
 
 		numbers[i] = n
 	}
