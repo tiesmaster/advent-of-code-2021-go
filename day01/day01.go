@@ -1,9 +1,13 @@
 package day01
 
-// func CountMeasurementIncreases(measurements []int) int {
-// 	return 0
-// }
-
 func CountMeasurementIncreases(measurements []int) int {
-	return len(measurements)
+
+	increases := 0
+	for i := 1; i < len(measurements); i++ {
+		if measurements[i - 1] < measurements[i] {
+			increases++
+		}
+	}
+
+	return increases
 }
