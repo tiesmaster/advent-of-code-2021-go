@@ -4,6 +4,6 @@ package day01
 // 	return 0
 // }
 
-func CountMeasurementIncreases() int {
-	return 2
+func CountMeasurementIncreases(measurements [5]int) int {
+	return len(measurements)
 }
