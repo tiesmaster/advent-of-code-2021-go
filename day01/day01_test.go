@@ -18,7 +18,6 @@ func TestCountMeasurementIncreases(t *testing.T) {
 	}
 }
 
-
 func TestCountMeasurementIncreasesSlidingWindow(t *testing.T) {
 	cases := []struct {
 		in   []int

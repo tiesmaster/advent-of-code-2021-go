@@ -15,7 +15,7 @@ func CountMeasurementIncreasesSlidingWindow(measurements []int) int {
 	increases := 0
 	previousSum := 0
 	for i := 0; i < len(measurements) - 3; i++ {
-		sum := measurements[i] + measurements[i+1] + measurements[i+2]
+		sum := sum(measurements[i:i+3])
 		if previousSum < sum {
 			increases++
 		}
@@ -23,4 +23,12 @@ func CountMeasurementIncreasesSlidingWindow(measurements []int) int {
 	}
 
 	return increases
+}
+
+func sum(numbers []int) int {
+	sum := 0
+	for _, x := range numbers {
+		sum += x
+	}
+	return sum
 }
