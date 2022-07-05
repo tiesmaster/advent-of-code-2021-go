@@ -14,8 +14,8 @@ func CountMeasurementIncreases(measurements []int) int {
 func CountMeasurementIncreasesSlidingWindow(measurements []int) int {
 	increases := 0
 	previousSum := 0
-	for i := 0; i < len(measurements) - 3; i++ {
-		sum := sum(measurements[i:i+3])
+	for i := 0; i < len(measurements)-3; i++ {
+		sum := sum(measurements[i : i+3])
 		if previousSum < sum {
 			increases++
 		}

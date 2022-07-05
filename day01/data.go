@@ -7,7 +7,7 @@ import (
 )
 
 var (
-	Data = parseData(data)
+	Data     = parseData(data)
 	TestData = parseData(testData)
 )
 
