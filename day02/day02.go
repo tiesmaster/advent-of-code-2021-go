@@ -18,6 +18,24 @@ func CalculateLocation(instructions []string) int {
 	return x * z
 }
 
+func CalculateLocationWithAim(instructions []string) int {
+	x, z, aim := 0, 0, 0
+	for _, line := range instructions {
+		switch line[:1] {
+		case "f":
+			amount := parse(line[8:])
+			x += amount
+			z += aim * amount
+		case "u":
+			aim -= parse(line[3:])
+		case "d":
+			aim += parse(line[5:])
+		}
+	}
+
+	return x * z
+}
+
 func parse(s string) int {
 	i, _ := strconv.Atoi(s)
 	return i

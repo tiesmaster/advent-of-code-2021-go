@@ -18,3 +18,19 @@ func TestCalculateLocation(t *testing.T) {
 	}
 }
 
+func TestCalculateLocationWithAim(t *testing.T) {
+	cases := []struct {
+		in   []string
+		want int
+	}{
+		{TestData, 900},
+		{Data, 1848454425},
+	}
+	for _, c := range cases {
+		got := CalculateLocationWithAim(c.in)
+		if got != c.want {
+			t.Errorf("CalculateLocationWithAim(%v) == %v, want %v", c.in, got, c.want)
+		}
+	}
+}
+
