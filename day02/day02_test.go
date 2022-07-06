@@ -8,7 +8,7 @@ func TestCalculateLocation(t *testing.T) {
 		want int
 	}{
 		{TestData, 150},
-		// {Data, 1561344},
+		{Data, 1561344},
 	}
 	for _, c := range cases {
 		got := CalculateLocation(c.in)
